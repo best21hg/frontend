@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Day2_css 두번째</title>
+    
+    <style>
+        /* 블록요소의 스타일을 이용해서 웹페이지의 레이아웃을 만듭니다 
+        블록요소의 기본너비는? 가로는 브라우저의너비 , 기본높이는 테그안에 컨탠츠의 크기만큼*/
+
+        ul{
+            /* 선모양은 border-위치-style + 선굵기 boder-위치-width+ 선색상 border-위치-color */
+            border-top: 1px dotted blue;
+            border-right: 1px double;
+            border-bottom: 1px dashed;
+            border-left: 1px solid;
+            
+              /* pading 은 블록요소의 내부여백 */
+              padding-top: 20px;
+              padding-right: 20px;
+              padding-bottom: 20px;
+              padding-left: 20px;
+              
+              /*  외부여백  */
+            margin-top: 40px;
+            margin-right: 60px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+        }
+        li {
+          /*  위아래 20px 좌우 40px/ */
+            margin : 20px 40px;
+        }
+
+        p{
+            /*위치지정안하면 위-오른-아래-왼쪽선 모두 적용 */
+                border: 2px dashed tomato;
+                padding: 20px;
+                margin: 40px 60px 50px 50px;
+                width: 400px;
+        }
+        h3{
+            border : 1px solid;
+            border-color: blue blueviolet brown chartreuse;
+            /* border-width: 시계방향으로 설정
+
+
+            */
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h3>CSS 란?</h3>
+    <p>CSS 는 HTML 문서의 스타일을 지정하는데 사용하는 언어입니다. CSS는 HTML 요소가 어떻게
+        표시되어야 하는지 설명합니다. </p>
+<ul>
+    <li style="color: crimson;font-weight: bold;font-size: 140%;">CSS 는 Cascading Style Sheets 의 약자입니다. </li>
+    <li>CSS 작성은 style 태그 사용합니다. 특정 요소에 적용할 선택자(selector)가 필요합니다. </li>
+    <li>CSS는 한번에 여러 웹페이지(html파일)에 적용될 수 있습니다.</li>
+    <li>확장자 css는 별도로 외부파일에 css를 작성할때 사용합니다.   </li>
+    <li>CSS 프로퍼티는 글꼴 크기,색상, 배경이미지, 테두리 등등이 있습니다.모든 태그에 공통적인것
+        또는 특정태그에만 적용되는 것을 구별해서 사용합니다.</li>
+</ul>
+</body>
+
+</html>
