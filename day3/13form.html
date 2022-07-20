@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Day3_폼from</title>
+    <!--href 속성은 http url 또는 로컬파일명사용
+    
+    링크하면 13member.css의 css를 사용한다-->
+    <link rel="stylesheet" href="13member.css">
+</head>
+<body>
+        <!--사용자 입력을 처리하는 from작성 
+        from태그 내에 입력요소 태그(input,button,select..)들을 포함시켜야함
+    작성완료돤 입력을 서버로 전달합니다-->
+
+<!--일반적인 목적으로 사용되는 블록요소 : div, 인라인요소 : span-->
+<div style="width: 70% ;margin: auto;">
+<h3>회원 가입</h3>
+<form action="">
+    <table style="width: 100%">
+        <!-- 부모요소인 div 태그기준 100%-->
+        <!-- label 태그는 연관된 택스트 클릭하면 입력요소가 포커스를 갖게 할수 있습니다-->
+        <tr>
+            <td><label for="lblname" class="title mpt">이름</label></td>
+            <!--입력요소 태그에는 값을 식별하기위한 name이 필요합니다-->
+            <td><input type="text" name="name" id="lblname"></td>
+        </tr>
+        <tr>
+            <td><label for="lblpassword" class="title mpt">패스워드</label></td>
+            <td><input type="password" name="password" minlength="8" id="lblpassword"></td>
+        </tr>
+        <tr>
+            <td><label for="lblemal" class="title mpt">이메일</label></td>
+            <td><input type="email" name="email" id="lblemal"></td>
+        </tr>
+        <tr>
+            <td><label for="lblage" class="title mpt">나이</label></td>
+            <td><input type="number" name="age" value="19" min="15" max="99" id="lblage"></td>
+        </tr>
+        <tr>
+            <td><label for="lbladdr" class="title mpt">지역(주소)</label></td>
+            <td>
+                <!--콤보박스 : 입력+선택
+                    선택상자 온리선택만-->
+                <select name="addr" id="lbladdr">
+                    <!--value값이 실제서버로 전달되는값-->
+                    <option value="서울">서울</option>
+                    <option value="인천">인천</option>
+                    <option value="대전">대전</option>
+                    <option value="광주">광주</option>
+                    <option value="부산">부산</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="" class="title">성별</label> </td>
+            <td>
+                <input type="radio" name="gender" value="male" id="lblmail">
+                <label for="lblmail" class="mpt">남성</label> 
+                <input type="radio" name="gender" value="femail" id="lblfmail">
+                <label for="lblfmail" class="mpt">여성</label>
+                <input type="radio" name="gender" 
+                checked="checked" value="unknown" id="lblunknown">
+                <label for="lblunknown" class="mpt">모름</label>
+                
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="" class="title">취미</label></td>
+            <td>
+                <!--다중선택이 가능한 체크박스 name 속성은 동일한 값. 서버는 배열로 처리-->
+                <input type="checkbox" name="hobby" value="축구" checked="축구" id="lbl축구">
+               <label for="lbl축구" class="mpt">축구</label>
+                <input type="checkbox" name="hobby" value="농구" id="lbl농구">
+                <label for="lbl농구" class="mpt">농구</label>
+                <input type="checkbox" name="hobby" value="달리기" id="lbl달리기">
+                <label for="lbl달리기" class="mpt">달리기</label>
+                <input type="checkbox" name="hobby" value="수영" id="lbl수영">
+                <label for="lbl수영" class="mpt">수영</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                    <!--input은 type생략시타입은 text-->
+                    <!-- <input type="button" value="버튼"> -->
+                    <!-- submit은 서버로 입력데이터를 전송함-->
+                    <!-- <input type="submit" value="제출"> -->
+                    <!-- <input type="reset" value="초기화"> -->
+                  
+                <!--botton은 기본타입 submit -->
+                <button>가입하기</button>
+                <button type="reset"> 다시쓰기</button>
+            </td>
+        </tr>    
+    </table> 
+</form>
+</div>
+    <!--ㄱ
+    실행 URL 예시 :
+    http://127.0.0.1:5500/day3/13form.html?name=%EC%95%88%ED%98%84%EA%B8%B0&password=1286qwer&email=best21hg%40naver.com&age=28
+
+    ->? 뒤에 사용자 입력항목들 &기호로 연결되서 하나의 문자열로 추가
+    -> ? 뒤에 query string 보일떄는 주로 조회(검색) 동작, 입력한 값이 url안보일땐 데이터를 저장하는동작 
+    -> 입력항목은 name 속성값이 key , 사용자가 입력한 것은 value
+    -> value가 한글또는 기호가 포함될떄 utf-8로 인코딩됨 
+-->
+</body>
+</html>
