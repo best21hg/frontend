@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Image Maps</h2>
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+<!-- img의 src속성은 이미지의 경로를 지정함
+     alt속성은 해당이미지가 안볼일경우 대신나오는 택스트
+    usemap은 map태그의 name속성과 결합하여 img요소에서 map요소사이의 관꼐형성-->>
+<img src="workplace.jpg" alt="Workplace" 
+usemap="#workmap" width="400" height="379">
+
+<!--map태그 이미지맵을 만들기 위해서사용함 name으로 이름지정하고
+     img태그에서 usemap으로 이미지 지정할수있음  usemap은 지정하고하하는 map의 name과 이름이같아야함 단#앞에 써야함
+    area태그는 이미지맵의 영역을 지정하기 위함
+    shape 선택영역 형태지정 (defalut : 화면 전체 / rect : 사각형 / circle : 원형 / poly : 다각형)
+    coords 영역좌표(x축,y축부터 ,x축,y축까지)
+    href 이동할 주소지정
+-->>
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/html/computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/html/phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://www.w3schools.com/html/coffee.htm">
+</map>
+
+</body>
+</html>
+
+<!-- 이미지 맵의 기본 개념은 이미지에서 클릭하는 위치에 따라 다른 작업을 수행할 수 있어야 한다는 것입니다.
+
+이미지 맵을 만들려면 이미지와 클릭 가능한 영역을 설명하는 HTML 코드가 필요합니다.-->>

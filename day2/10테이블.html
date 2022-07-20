@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day2_표4</title>
+    <style>
+        td{
+            border: 1px solid gray;
+            font-size: 1.2em;   /* 1.2배 */
+
+        }
+        table{
+            width: 400px;
+        }
+
+        /* 자식요소 tr중 1번쨰것 찾아서  그것의 자식 td요소를 선택  */
+        tr:nth-child(1) > td{
+            width: 100px;
+            background-color: bisque;
+        }
+
+        /* 3번째 것 찾아서 자손 td 요소선택 자손요소 선택기호는 공백*/
+        table:nth-child(3) td{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+
+    </table>
+
+  
+    <table style="background-color: aquamarine;">
+        <!-- 합치기 colspa은 가로로 합치고 rowspan은 세로로합친다-->
+        
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">5</td>
+            <td rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td >7</td>
+            <td colspan="2">8</td>
+        </tr>
+
+      
+    </table>
+
+
+    <table>
+        <!-- 합치기 colspa은 가로로 합치고 rowspan은 세로로합친다-->
+        
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">5</td>
+            <td rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td >7</td>
+            <td colspan="2">8</td>
+        </tr>
+
+      
+    </table>
+</body>
+</html>
